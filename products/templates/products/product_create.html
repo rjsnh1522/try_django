@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- v1 -->
+<!-- <form action="" method="post">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="submit">
+</form> -->
+
+<!-- v2 -->
+<!-- <form action="" method="POSt">
+    {% csrf_token %}
+    <input type="text" name=title placeholder="your title">
+    <input type="submit" value="save">
+</form> -->
+
+<!-- v3   -->
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="submit">
+</form>
+
+
+
+
+{% endblock%}

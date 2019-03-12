@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>In App {{object.title}}</h1>
+<p>{% if object.description != None %}
+        {{object.description}}
+    {% else %}
+        Description comming soon
+    {% endif %}
+</p>
+
+<!-- v4  delete data of product -->
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="delete">
+</form>
+    
+<a href="{{object.get_edit_url}}">Edit</a>
+{% endblock%}

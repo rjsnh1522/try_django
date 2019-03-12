@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Contact template</h1>
+
+<h2>Using context</h2>
+<p>
+    {{my_text}},{{my_number}},{{my_list}}
+</p>
+<p>{{html|striptags|safe|slugify}}</p>
+
+<ul>
+{% for sub_list in my_list %}
+    <li>{{forloop.counter }} --- {{ sub_list}}</li>
+{% endfor %}
+</ul>
+{% endblock content %}
